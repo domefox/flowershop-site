@@ -1,130 +1,53 @@
-/* 07071F - this is the blue bg color*/
-
 .home {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .home .overlap-wrapper {
-    background-color: #ffffff;
-    height: 1080px;
-    width: 1920px;
-  }
-  
-  .home .overlap {
-    background-image: url(../../assets/bg.png);
-    background-size: 100% 100%;
-    height: 1080px;
-    position: relative;
-  }
-  
-  .home .overlap-group {
-    height: 838px;
-    left: 708px;
-    position: absolute;
-    top: 242px;
-    width: 529px;
-  }
-  
-  .home .flower {
-    height: 353px;
-    left: 75px;
-    object-fit: cover;
-    position: absolute;
-    top: 122px;
-    width: 353px;
-  }
-  
-  .home .practice-petal {
-    height: 155px;
-    left: 265px;
-    position: absolute;
-    top: 487px;
-    width: 264px;
-  }
-  
-  .home .div-wrapper {
-    background-image: url(../../assets/practicepetal.svg);
-    background-size: 100% 100%;
-    height: 112px;
-    left: -3px;
-    position: relative;
-    top: 20px;
-    width: 262px;
-  }
-  
-  .home .text-wrapper-4 {
-    color: #fff0f0;
-    font-family: "rainyhearts-Medium", Helvetica;
-    font-size: 40px;
-    font-weight: 500;
-    left: 74px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 35px;
-    width: 163px;
-  }
-  
-  .home .theory-petal {
-    height: 178px;
-    left: 34px;
-    position: absolute;
-    top: 518px;
-    width: 249px;
-  }
-  
-  .home .overlap-2 {
-    background-image: url(../../assets/theorypetal.svg);
-    background-size: 100% 100%;
-    height: 111px;
-    left: 11px;
-    position: relative;
-    top: 40px;
-    width: 225px;
-  }
-  
-  .home .text-wrapper-5 {
-    color: #fff0f0;
-    font-family: "rainyhearts-Medium", Helvetica;
-    font-size: 40px;
-    font-weight: 500;
-    left: 54px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 31px;
-    width: 144px;
-  }
-  
-  .home .stem {
-    height: 448px;
-    left: 247px;
-    position: absolute;
-    top: 390px;
-    width: 23px;
-  }
-  
-  .home .flowershop {
-    height: 223px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 517px;
-  }
-  
-  .home .menu-bar-instance {
-    left: 1717px !important;
-    position: absolute !important;
-    top: 54px !important;
-  }
-  
-  .home .group-6 {
-    left: 43px !important;
-    position: absolute !important;
-    top: 60px !important;
-  }
-  
+  background-color: #07071F;
+  position: relative; /* Changed from flex to relative */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevents any overflow from being visible */
+}
+
+/* Position the flowershop logo above the stem */
+.home .flowershop {
+  position: absolute;
+  bottom: 560px; /* Adjust this value to position the flower above the stem */
+  left: 50%;
+  transform: translateX(-50%); /* Center align horizontally and scale down to 90% of original size */
+  z-index: 10; /* Ensures it's above other elements */
+}
+
+/* Position the flower above the stem */
+.home .flower {
+  position: absolute;
+  bottom: 500px; /* Adjust this value to position the flower above the stem */
+  left: 50%;
+  transform: translate(-50%, 50%); /* Adjust vertically and horizontally */
+  z-index: 5; /* Below the flowershop logo */
+}
+
+/* Position the stem at the bottom center of the page */
+.home .stem {
+  position: absolute;
+  bottom: 0; /* Align to the bottom */
+  left: 50.3%;
+  transform: translateX(-50%) ; /* Center align horizontally */
+}
+
+/* Position petals relative to the stem */
+.home .practice-petal {
+  position: absolute;
+  bottom: 170px; /* Adjust as needed */
+  left: calc(50.3% + 4px); /* Adjust as needed */
+
+}
+
+.home .theory-petal {
+  position: absolute;
+  bottom: 124px; /* Adjust as needed */
+  left: calc(50% - 220px); /* Adjust as needed */
+
+}
+
+.theory-petal path:hover {
+  fill: rgba(40, 88, 45, 0.5); /* Change to the color you want on hover with 50% transparency */
+  ; /* Change to the color you want on hover */
+}

@@ -1,35 +1,21 @@
 import React from "react";
-// import { Group } from "./Group";
-// import { MenuBar } from "./MenuBar";
 import "./style.css";
-import flower from '../../assets/flower.svg';
+import flower from '../../assets/flower.png';
 import stem from '../../assets/stem.svg';
-
+import { ReactComponent as PracticePetal } from '../../assets/practicepetal.svg';
+import { ReactComponent as TheoryPetal } from '../../assets/theorypetal.svg';
+import flowershop from '../../assets/flowershop.svg';
 
 export const Home = () => {
   return (
     <div className="home">
-      <div className="overlap-wrapper">
-        <div className="overlap">
-          <div className="overlap-group">
-            <img className="flower" alt="Flower" src={flower} />
-            <div className="practice-petal">
-              <div className="div-wrapper">
-                <div className="text-wrapper-4">Practice</div>
-              </div>
-            </div>
-            <div className="theory-petal">
-              <div className="overlap-2">
-                <div className="text-wrapper-5">Theory</div>
-              </div>
-            </div>
-            <img className="stem" alt="Stem" src={stem} />
-            <img className="flowershop" alt="Flowershop" src="flowershop.svg" />
-          </div>
-          {/* <MenuBar className="menu-bar-instance" />
-          <Group className="group-6" /> */}
+        <img className="flowershop" alt="Flowershop" src={flowershop} />
+        <img className="flower" alt="Flower" src={flower} />
+        <div className="stem-container">
+        <img className="stem" alt="Stem" src={stem} />
+        <PracticePetal className="practice-petal" />
+        <TheoryPetal className="theory-petal" />
         </div>
-      </div>
     </div>
   );
 };
