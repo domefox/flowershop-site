@@ -4,50 +4,56 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden; /* Prevents any overflow from being visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Position the flowershop logo above the stem */
 .home .flowershop {
   position: absolute;
-  bottom: 560px; /* Adjust this value to position the flower above the stem */
-  left: 50%;
-  transform: translateX(-50%); /* Center align horizontally and scale down to 90% of original size */
+  bottom: 520px; /* Adjust this value to position the flower above the stem */
+  transform: scale(0.85) translate(1%);
   z-index: 10; /* Ensures it's above other elements */
 }
 
 /* Position the flower above the stem */
 .home .flower {
   position: absolute;
-  bottom: 500px; /* Adjust this value to position the flower above the stem */
-  left: 50%;
-  transform: translate(-50%, 50%); /* Adjust vertically and horizontally */
+  bottom: 290px; /* Adjust this value to position the flower above the stem */
+  transform: scale(0.85);
   z-index: 5; /* Below the flowershop logo */
 }
 
 /* Position the stem at the bottom center of the page */
 .home .stem {
   position: absolute;
-  bottom: 0; /* Align to the bottom */
-  left: 50.3%;
-  transform: translateX(-50%) ; /* Center align horizontally */
+  bottom: -10px; /* Align to the bottom */
+  left: 49.7%;
+  transform: scale(0.8);
+
 }
+
 
 /* Position petals relative to the stem */
 .home .practice-petal {
   position: absolute;
   bottom: 170px; /* Adjust as needed */
-  left: calc(50.3% + 4px); /* Adjust as needed */
+  left: calc(50.3% - 20px); /* Adjust as needed */
+  transform: scale(0.8);
+
 
 }
 
 .home .theory-petal {
   position: absolute;
   bottom: 124px; /* Adjust as needed */
-  left: calc(50% - 220px); /* Adjust as needed */
+  left: calc(50% - 197px); /* Adjust as needed */
+  transform: scale(0.8);
 
 }
 
-.theory-petal path:hover {
+.theory-petal path:hover, .practice-petal path:hover {
   fill: rgba(40, 88, 45, 0.5); /* Change to the color you want on hover with 50% transparency */
   ; /* Change to the color you want on hover */
 }
