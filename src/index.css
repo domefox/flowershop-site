@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Pixeboy-Regular';
+  src: url('./assets/Pixeboy.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rainyhearts';
+  src: url('./assets/rainyhearts.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

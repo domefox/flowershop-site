@@ -57,3 +57,9 @@
   fill: rgba(40, 88, 45, 0.5); /* Change to the color you want on hover with 50% transparency */
   ; /* Change to the color you want on hover */
 }
+
+.home .menu-bar-instance {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
