@@ -9,15 +9,22 @@
   justify-content: center;
 }
 
-/* Position the flowershop logo above the stem */
+
+/* .home .flowershop {
+  position: absolute;
+  bottom: 520px; 
+  transform: scale(0.85) translate(1%);
+  z-index: 10;
+
+} */
+
 .home .flowershop {
   position: absolute;
-  bottom: 520px; /* Adjust this value to position the flower above the stem */
-  transform: scale(0.85) translate(1%);
-  z-index: 10; /* Ensures it's above other elements */
+  bottom: 520px; /* Adjust this value to position it correctly */
+  z-index: 10; /* Higher z-index to ensure it's on top */
+  /* Other styles as needed */
 }
 
-/* Position the flower above the stem */
 .home .flower {
   position: absolute;
   bottom: 290px; /* Adjust this value to position the flower above the stem */
@@ -58,8 +65,3 @@
   ; /* Change to the color you want on hover */
 }
 
-.home .menu-bar-instance {
-  position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-}

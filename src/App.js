@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Menu />} />
         <Route path="/" element={<Home />} index />
         <Route path="/theory" element={<Theory />} />
-        {/* <Route path="/practice" element={<Practice />} /> */}
+        <Route path="/practice" element={<Practice />} />
       </Routes>
     </Router>
   );
