@@ -1,42 +1,143 @@
+/* src/components/Practice/style.css */
+
 .practice-page {
-    font-family: 'Helvetica', sans-serif;
-    background-size: cover; /* Cover the entire page */
-    background-position: center; /* Center the background image */
-    padding: 0; /* Remove padding if you want the image to cover the whole page */
-    margin: 0; /* Remove default margin */
-    height: 100vh; /* Set the page height to the full viewport height */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Align items to the center horizontally */
-    justify-content: center; /* Align content to the center vertically */
-    
-      
-  }
+  font-family: 'Helvetica', sans-serif;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.practice-title {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+  font-family: 'rainyhearts', cursive;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.practice-content {
+  flex-direction: column; /* flex-direction: column; - This makes the main axis vertical and starts from the top.
+  flex-direction: row; - This would make the main axis horizontal and starts from the left.
+  flex-direction: column-reverse; - This would make the main axis vertical and starts from the bottom.
+  flex-direction: row-reverse; - This would make the main axis horizontal and starts from the right. */
+  justify-content: center;
+  align-items: center; /* align-items: center; - This centers the flex items along the cross axis.
+  align-items: flex-start; - This would align the flex items at the start of the container.
+  align-items: flex-end; - This would align the flex items at the end of the container.
+  align-items: baseline; - This would align the flex items along their baseline.
+  align-items: stretch; - This would stretch the flex items to fill the container. */
+  width: 100%; /* width: 100%; - This makes the container take up the full width of its parent.
+  width: auto; - This would make the container take up only as much width as necessary.
+  width: <length>; - This would set the width to a fixed length.
+  width: <percentage>; - This would set the width to a percentage of the parent's width. */
+  display: grid; /* display: grid; - This makes the container a grid container and enables the use of other grid properties.
+  display: inline-grid; - This would make the container an inline-level grid container. */
+  grid-template-columns: repeat(2, 1fr); /* grid-template-columns: repeat(2, 1fr); - This creates two equal-width columns.
+  grid-template-columns: repeat(<number>, <length>); - This would create a specified number of columns with a specified length.
+  grid-template-columns: <length> ...; - This would create columns with specified lengths.
+  grid-template-columns: <percentage> ...; - This would create columns with specified percentages of the container's width. */
+  gap: 20px; /* gap: 20px; - This sets the size of the gap between grid items.
+  gap: <length>; - This would set the size of the gap to a fixed length.
+  gap: <percentage>; - This would set the size of the gap to a percentage of the container's width. */
+  padding-top: 50vh; /* Add this line */
+  margin-left: 12%; /* Add this line */
+
+}
+
+.project-box {
+  background-color: rgba(255,255,255, 0.2); /* Add this line */
+
+  /* background-size: cover; - This scales the background image to be as large as possible so that the background area is completely covered by the image.
+  background-size: contain; - This would scale the image to the largest size such that both its width and its height can fit inside the content area.
+  background-size: auto; - This would scale the image with its original dimensions. */
+  background-size: contain;
   
-  .practice-title {
-    position: fixed;
-    top: 0; /* Add this to ensure the menu bar starts at the top */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between the logo and menu items */
-    align-items: flex-start; /* Align items to the start of the flex container */
-    padding-top: 40px; /* Add padding to the top of the menu bar */
-    font-family: 'rainyhearts', cursive; /* Make sure the font is correctly imported */
-    font-size: 48px; /* Adjust to match the size in the first image */
-    color: #ffffff; /* Set color to white */
-    text-align: center; /* Center the text horizontally */
-    margin: 0 0 20px; /* Add margin at the bottom */
-  }
+  /* display: flex; - This establishes a flex container and enables a flex context for all its direct children.
+  display: block; - This would make the container a block-level element.
+  display: inline-block; - This would make the container an inline-level block container.
+  display: grid; - This would make the container a grid container and enables the use of other grid properties. */
+  display: block;
   
-  .practice-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+  /* align-items: center; - This centers the flex items along the cross axis.
+  align-items: flex-start; - This would align the flex items at the start of the container.
+  align-items: flex-end; - This would align the flex items at the end of the container.
+  align-items: baseline; - This would align the flex items along their baseline.
+  align-items: stretch; - This would stretch the flex items to fill the container. */
+  align-items: center;
   
-  .project-row {
-    display: flex;
-    justify-content: space-between;
-    width: 90%; /* Adjust as needed */
-    margin-bottom: 20px;
-  }
+  /* flex-direction: column; - This makes the main axis vertical and starts from the top.
+  flex-direction: row; - This would make the main axis horizontal and starts from the left.
+  flex-direction: column-reverse; - This would make the main axis vertical and starts from the bottom.
+  flex-direction: row-reverse; - This would make the main axis horizontal and starts from the right. */
+  flex-direction: column;
+  
+  /* justify-content: center; - This centers the flex items along the main axis.
+  justify-content: flex-start; - This would align the flex items at the start of the container.
+  justify-content: flex-end; - This would align the flex items at the end of the container.
+  justify-content: space-between; - This would distribute the flex items evenly in the container along the main axis.
+  justify-content: space-around; - This would distribute the flex items evenly in the container along the main axis, but with half-size spaces on either end. */
+  justify-content: flex-start;
+  
+  /* padding: 15px; - This sets the padding area on all four sides of an element.
+  padding: <length>; - This would set the padding to a fixed length.
+  padding: <percentage>; - This would set the padding to a percentage of the parent's width. */
+  padding: 15px;
+  
+  /* margin-bottom: 20px; - This sets the bottom margin of an element.
+  margin-bottom: <length>; - This would set the bottom margin to a fixed length.
+  margin-bottom: <percentage>; - This would set the bottom margin to a percentage of the parent's width. */
+  margin-bottom: 20px;
+  
+  /* width: 70%; - This sets the width of an element as a percentage of its containing element.
+  width: auto; - This would make the container take up only as much width as necessary.
+  width: <length>; - This would set the width to a fixed length.
+  width: <percentage>; - This would set the width to a percentage of the parent's width. */
+  width: 70%;
+  
+  /* height: 200px; - This sets the height of an element.
+  height: auto; - This would make the container take up only as much height as necessary.
+  height: <length>; - This would set the height to a fixed length.
+  height: <percentage>; - This would set the height to a percentage of the parent's height. */
+  height: 200px;
+}
+
+.project-image {
+  max-width: 33%;
+  max-height: 85%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.project-text {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title {
+  font-family: 'Pixeboy';
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 4.5px;
+}
+
+.project-subtitle, .project-date {
+  font-family: 'rainyhearts';
+  font-size: 30px;
+  color: #ffffff;
+}

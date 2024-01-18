@@ -3,6 +3,7 @@ import p5 from 'p5';
 import flowershoplogo from '../assets/flowershoplogo.png'; // Make sure the path is correct
 
 export const FlowerShopLogo = ({ className }) => {
+  console.log('FlowerShopLogo rendered'); // This will log every time the component is rendered
   const sketchRef = useRef();
 
   useEffect(() => {
